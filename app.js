@@ -14,4 +14,12 @@ app.get("/", (req, res) => {
      });
 });
 
+app.get("/tour", (req, res) => {
+    res.render("tour", {
+        title: "Express Server Render",
+        mainTitle: "Let's take a tour",
+        subtitle: "Computer, did we bring batteries? Computer?"
+    });
+});
+
 app.listen(port, () => console.log("Listening on port " + port));
