@@ -22,4 +22,12 @@ app.get("/tour", (req, res) => {
     });
 });
 
+app.get("/features", (req, res) => {
+    res.render("features", {
+        title: "Express Server Render",
+        mainTitle: "Take a look at what we can offer you",
+        subtitle: "A backwards poet writes inverse."
+    });
+});
+
 app.listen(port, () => console.log("Listening on port " + port));
