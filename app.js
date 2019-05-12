@@ -42,7 +42,34 @@ app.get("/pricing", (req, res) => {
     res.render("pricing", {
         title: "Express Server Render",
         mainTitle: "Save money",
-        subtitle: "A bicycle can't stand alone; it is two tired."
+        subtitle: "A bicycle can't stand alone; it is two tired.",
+        subscriptions: {
+            free: {
+                type: "Free",
+                prices: [{
+                    time: "Forever",
+                    quantity: "Free"
+                }]
+            },
+            pro: {
+                type: "Pro",
+                prices: [
+                    {
+                        time: "Weekly",
+                        quantity: "10€"
+                    },
+                    {
+                        time: "Monthly",
+                        quantity: "20€"
+                    },
+                    {
+                        time: "Yearly",
+                        quantity: "30€"
+                    }
+                ]
+
+            }
+        }
     });
 });
 

@@ -5,5 +5,10 @@ html
         include includes/navbar.pug
         
         include includes/jumbotron.pug
+        
+        block boxes
+            include mixins/boxRow.pug
+            each sub in subscriptions
+                +boxRow(sub)           
                     
         include includes/footer.pug
