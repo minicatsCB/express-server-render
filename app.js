@@ -38,4 +38,12 @@ app.get("/support", (req, res) => {
     });
 });
 
+app.get("/pricing", (req, res) => {
+    res.render("pricing", {
+        title: "Express Server Render",
+        mainTitle: "Save money",
+        subtitle: "A bicycle can't stand alone; it is two tired."
+    });
+});
+
 app.listen(port, () => console.log("Listening on port " + port));
