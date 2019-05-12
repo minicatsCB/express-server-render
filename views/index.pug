@@ -1,14 +1,14 @@
 doctype html
 html
-    include head.pug
+    include includes/head.pug
     body
-        include navbar.pug
+        include includes/navbar.pug
         
-        include jumbotron.pug
+        include includes/jumbotron.pug
         
         block boxes
             include boxRow.pug
             - var boxes = ["dark", "light", "dark"];
             +boxRow(boxes)
                     
-        include footer.pug
+        include includes/footer.pug
