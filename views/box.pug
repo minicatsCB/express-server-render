@@ -1,0 +1,9 @@
+mixin box(theme)
+    - var backgroundColor = (theme === "dark" ? "bg-dark" : "bg-light")
+    - var textColor = (theme === "dark" ? "text-white" : "text-dark")
+    - var imageColor = (theme === "dark" ? 'bg-light' : 'bg-dark')
+    div(class=`${backgroundColor} ${textColor} mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden`)
+        div(class="my-3 py-3")
+            h2(class="display-5") Another headline
+            p(class="lead") And an even wittier subheading.
+        div(class=`${imageColor} box-shadow mx-auto`, style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;")
