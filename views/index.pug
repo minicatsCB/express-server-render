@@ -5,11 +5,10 @@ html
         include navbar.pug
         
         include jumbotron.pug
-          
-        div(class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3")
-            block boxes
-                include box.pug
-                +box("light")
-                +box("dark")
+        
+        block boxes
+            include boxRow.pug
+            - var boxes = ["dark", "light", "dark"];
+            +boxRow(boxes)
                     
         include footer.pug
