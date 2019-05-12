@@ -8,7 +8,9 @@ app.set("view engine", "pug");
 
 app.get("/", (req, res) => {
     res.render("index", {
-        title: "Express Server Render"
+        title: "Express Server Render",
+        mainTitle: "Welcome!",
+        subtitle: "For sale: baby shoes. Never worn."
      });
 });
 
