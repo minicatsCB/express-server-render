@@ -30,4 +30,12 @@ app.get("/features", (req, res) => {
     });
 });
 
+app.get("/support", (req, res) => {
+    res.render("support", {
+        title: "Express Server Render",
+        mainTitle: "We are here to help you",
+        subtitle: "You can tune a piano, but you can't tuna fish."
+    });
+});
+
 app.listen(port, () => console.log("Listening on port " + port));
