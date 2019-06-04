@@ -1,0 +1,14 @@
+mixin boxRow(subscription)
+    include box.pug
+    if subscription
+        h1= `${subscription.type} subscription`
+        div(class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3")
+            - var backgroundColor = (subscription.type === "pro" ? "bg-dark" : "bg-light")
+            - var textColor = (subscription.type === "pro" ? "text-white" : "text-dark")
+            - var imageColor = (subscription.type === "pro" ? 'bg-light' : 'bg-dark')
+            each price in subscription.prices
+                +box(backgroundColor, textColor, imageColor, price.time, price.quantity)
+    else
+        div(class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3")
+            each box in [0, 1, 2]
+                +box()
